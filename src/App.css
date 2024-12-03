@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --white: #eeeeee;
+  --outline-white: #616f85;
+  --shadow-color: #b7b8ca80;
+  --score-label: #2a46c0;
+  --score-color: #3b4363;
+  --light-orange: #eca725;
+  --dark-orange: #eb9f0e;
+  --darker-orange: #c76c1d;
+  --light-blue: #5772f3;
+  --dark-blue: #4665f4;
+  --darker-blue: #2b45c0;
+  --light-red: #df405e;
+  --dark-red: #db2e4c;
+  --darker-red: #9b1633;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  width: 100%;
+  background: rgb(28,47,79);
+  background: -moz-radial-gradient(circle, hsl(214, 47%, 23%) to hsl(237, 49%, 15%));
+  background: -webkit-radial-gradient(circle, hsl(214, 47%, 23%) to hsl(237, 49%, 15%));
+  background: radial-gradient(circle, hsl(214, 47%, 23%) to hsl(237, 49%, 15%));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--outline-white);
+  border-radius: 8px;
+}
+
+header .logo{
+  margin-left: 10px;
+}
+
+header img{
+  width: 90px;
+  height: auto;
+}
+
+header .score-container{
+  background-color: var(--white);
+  width: 80px;
+  height: 75px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.score-label{
+  color: var(--score-label);
+  font-size: 12px;
+  letter-spacing: 1.5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score{
+  color: var(--score-color);
+  font-size: 45px;
+  font-weight: 700;
+  margin-top: -5px;
 }
