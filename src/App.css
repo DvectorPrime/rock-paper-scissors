@@ -67,19 +67,20 @@ header .score-container{
 }
 
 main{
-  margin-top: 100px;
   position: relative;
+  margin: 80px auto 0px auto;
+  max-width: 450px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .game-triangle{
   position: absolute;
-  width: 300px
+  width: 200px
 }
 
 button{
@@ -87,8 +88,8 @@ button{
 }
 
 .outer-circle{
-  height: 150px;
-  width: 150px;
+  height: 140px;
+  width: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,8 +123,8 @@ button{
 }
 
 .inner-circle{
-  height: 115px;
-  width: 115px;
+  height: 100px;
+  width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,13 +139,13 @@ button{
 
 footer{
   display: block;
+  position: absolute;
+  bottom: 40px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
 }
 
 .rules{
+  display: block;
   background-color: transparent;
   border: 2px solid var(--outline-white);
   padding: 10px 40px;
@@ -155,10 +156,123 @@ footer{
   font-weight: light;
   font-size: 20px;
   transition: linear 0.2s all;
+  margin: 0 auto;
 }
 
 .rules:hover{
   background-color: var(--white);
   color:#1c2f4f;
   border: 2px solid var(--white);
+}
+
+@media only screen and (min-width: 600px) {
+  main{
+    max-width: 700px;
+    gap: 60px;
+  }
+
+  .game-triangle{
+    width: 500px;
+    margin-top: 100px;
+  }
+
+  .outer-circle{
+    height: 250px;
+    width: 250px;
+  }
+
+  .inner-circle{
+    height: 190px;
+    width: 190px;
+    box-shadow: 0px 5px #b7b8ca inset;
+  } 
+
+  .avatar{
+    width: 70px;
+  }
+
+  footer{
+    bottom: 100px;
+  }
+
+  .rules{
+    padding: 20px 70px;
+    border-radius: 15px;
+    letter-spacing: 5px;
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  header{
+    width: 55%;
+    margin: 40px auto 30px auto;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+  
+  header .logo{
+    margin-left: 10px;
+  }
+  
+  header img{
+    width: 130px;
+    height: auto;
+  }
+  
+  header .score-container{
+    width: 140px;
+    height: 100px;
+    
+  }
+  
+  .score-label{
+    font-size: 14px;
+    letter-spacing: 2.5px;
+  }
+  
+  .score{
+    font-size: 55px;
+    margin-top: -10px;
+  }
+
+  main{
+    position: relative;
+    margin-top: 0px;
+    max-width: 600px;
+    gap: 40px;
+  }
+  
+  .game-triangle{
+    position: absolute;
+    top: -20px;
+    width: 300px
+  }
+  
+  button{
+    cursor: pointer;
+  }
+  
+  .outer-circle{
+    height: 180px;
+    width: 180px;
+  }
+  
+  .inner-circle{
+    height: 140px;
+    width: 140px;
+  } 
+
+  footer{
+    bottom: 30px;
+  }
+  
+  .rules{
+    padding: 10px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: linear 0.2s all;
+    margin: 0 40px 0 auto;
+  }
+  
 }

@@ -21,17 +21,17 @@ function Main(){
                 <img alt="" src={triangle} className="game-triangle" />
                 <button type="button" className="outer-circle paper">
                     <div className="inner-circle">
-                        <img alt="" src={paper} />
+                        <img alt="" src={paper} className="avatar" />
                     </div>
                 </button>
                 <button type="button" className="outer-circle scissors">
                     <div className="inner-circle">
-                    <img alt="" src={scissors} />
+                    <img alt="" src={scissors} className="avatar" />
                     </div>
                 </button>
                 <button type="button" className="outer-circle rock">
                     <div className="inner-circle">
-                        <img alt="" src={rock} />
+                        <img alt="" src={rock} className="avatar" />
                     </div>
                 </button>
             </main>
