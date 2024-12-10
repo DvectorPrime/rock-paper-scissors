@@ -66,7 +66,7 @@ header .score-container{
   margin-top: -5px;
 }
 
-main{
+.main{
   position: relative;
   margin: 80px auto 0px auto;
   max-width: 450px;
@@ -165,8 +165,44 @@ footer{
   border: 2px solid var(--white);
 }
 
+.rules-div{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 3;
+}
+
+.rules-div h3{
+  margin-top: 12vh;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--score-color);
+  text-align: center;
+}
+
+.rules-div img{
+  display: block
+}
+
+.rule-sheet{
+  margin: 15vh auto;
+}
+
+.close-icon{
+  position: absolute;
+  bottom: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.large-screen{
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
-  main{
+  .main{
     max-width: 700px;
     gap: 60px;
   }
@@ -236,7 +272,7 @@ footer{
     margin-top: -10px;
   }
 
-  main{
+  .main{
     position: relative;
     margin-top: 0px;
     max-width: 600px;
@@ -274,5 +310,39 @@ footer{
     transition: linear 0.2s all;
     margin: 0 40px 0 auto;
   }
+
+  .rules-div{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .rules-div h3{
+    margin-top: 0;
+  }
+
+  .small-screen{
+    display: none;
+  }
+
+  .large-screen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .large-screen button{
+    border: none;
+  }
   
+  .close-icon{
+    position: static;
+    transform: translateX(0);
+  }
 }
