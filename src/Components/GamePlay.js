@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../images/logo.svg"
-import triangle from "../images/bg-triangle.svg"
-import Button from "./Button";
+import PhaseOne from "./PhaseOne";
+import PhaseTwo from "./PhaseTwo";
 
 function GamePlay( {setShowRules} ){
     
@@ -20,12 +20,10 @@ function GamePlay( {setShowRules} ){
                     <p className="score">12</p>
                 </div>
             </header>
-            <div className="main">
-                <img alt="" src={triangle} className="game-triangle" />
-                <Button avatar="paper" /> 
-                <Button avatar="scissors" />
-                <Button avatar="rock" />  
-            </div>
+            <main>
+                {/* <PhaseOne /> */}
+                <PhaseTwo />
+            </main>
             <footer>
                 <button type="button" className="rules" onClick={displayRules}>RULES</button>
             </footer>

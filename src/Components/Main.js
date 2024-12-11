@@ -9,10 +9,12 @@ function Main(){
         <>
        { 
             showRules === true &&
-            <Rules
-                showRules = {showRules}
-                setShowRules = {setShowRules}
-            />
+            <div className="rules-overlay">
+                <Rules
+                    showRules = {showRules}
+                    setShowRules = {setShowRules}
+                />
+            </div>
        }
         <GamePlay 
             setShowRules= {setShowRules} 
